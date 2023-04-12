@@ -3,7 +3,7 @@
 }
 
 .men {
-    background-color: #080808;
+    background-color: #0e0e0e;
     font-family: 'Nunito Sans', sans-serif;
     color: white;
     height: auto;
@@ -108,15 +108,13 @@ body {
     margin-top: 50px;
 }
 
-/* Nosotros */
-body{
-   
-background-image: linear-gradient(to bottom, #111, #333);
+.fondo-nosotros{
+  background-image: url(../img/Banner-Nosotros.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.agrandar{
-    width: 100%;
-}
-}
 /*
 header {
   display: flex;
@@ -279,6 +277,3 @@ i{
     
   }
 }
-
-
-
