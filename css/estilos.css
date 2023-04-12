@@ -1,3 +1,109 @@
 .agrandar{
     width: 100%;
 }
+
+.men {
+    background-color: #080808;
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    height: auto;
+}
+
+.oculto {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    height:0;
+    overflow: hidden;
+    transition: height 500ms ease;
+    
+}
+
+.oculto.mostrar {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    border-top: 2px solid white;
+    border-bottom:2px solid white;
+    margin-left: 25%; 
+    margin-right: 25%;
+}
+.oculto.ocultar{
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    margin-left: 25%; 
+    margin-right: 25%;
+    
+}
+body {
+    background-color: black;
+    margin: 0;
+}
+
+#botonmenu {
+    font-family: 'Nunito Sans', sans-serif;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    border-width: 0px;
+    background-color: white;
+    margin-left: 60px;
+    display: inline;
+
+}
+.arrow .flecha_abajo{
+    transform: rotate(180deg);
+}
+
+.flecha_abajo {
+    color: black;
+    transition: transform .5s ease-in-out;
+    width:10px;
+    height: 10px;
+}
+
+#tit {
+    font-size: 45px;
+    font-weight: bold;
+}
+.primer{
+    margin-bottom: 30px;
+    display: inline;
+    text-align: center;
+    padding-top: 50px;
+}
+.segundo{
+    display: inline;
+    text-align: center;
+    padding-bottom: 100px;
+}
+.tipo{
+    margin-top: 35px ;
+    margin-bottom: 35px;
+}
+.principall{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.eleccion1 p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.eleccion1 p:first-child{
+    margin-top: 50px;
+}
+
+.eleccion2 p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.eleccion2 p:first-child{
+    margin-top: 50px;
+}
