@@ -1,5 +1,5 @@
 
-@media (max-width: 900px){
+@media (max-width: 1000px){
 
     .banner{
         width: 90vh;
@@ -9,16 +9,22 @@
     .parrafo-h1{
         width: 50vh;
     }
+
+    .menu{
+        width: 100%;
+        background-color: #1d1d1d;
+        height: 70vh;
+    }
+
+    .hover:hover{
+        background-color: rgb(26, 26, 26);
+    }
 }
 
 
 @media (max-width: 600px) {
 
     .banner{
-        display: none;
-    }
-
-    .nav{
         display: none;
     }
   }
