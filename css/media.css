@@ -1,0 +1,24 @@
+
+@media (max-width: 900px){
+
+    .banner{
+        width: 90vh;
+        height: 100vh;
+    }
+
+    .parrafo-h1{
+        width: 50vh;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .banner{
+        display: none;
+    }
+
+    .nav{
+        display: none;
+    }
+  }
