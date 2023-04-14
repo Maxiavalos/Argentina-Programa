@@ -96,42 +96,62 @@
         </section>
     </section>
 
-    <section class="row" style="height: 100vh;">
+    <section class="row" style="height: 100vh; overflow: hidden;">
         <div class="col fondo-nosotros">
 
         </div>
-        <div class="col d-flex justify-content-center align-items-center">
-          <div class="texto w-50">
+        <div class="col d-flex justify-content-center align-items-center nosotros">
+          <div class="texto w-50 h-50">
             <h2 class="mb-4" style="color: #FFE36D;">Nosotros</h2>
             <p class="fs-5" style="color: #D8D2B8;">Bienvenidos a nuestra nueva cafetería, donde nos enorgullece ofrecer una selección de café de origen único, cuidadosamente preparados para brindar una experiencia única y deliciosa. Además, ofrecemos bebidas frías y calientes, comidas saludables y un ambiente acogedor para disfrutar de su experiencia. Esperamos ser su destino diario para relajarse, socializar o simplemente disfrutar de un buen café en solitario. ¡Los esperamos en nuestra cafetería!</p>
           </div>
           </div>
     </section>
 
-  <footer> 
-    <div class="contacto"> 
-     <h2>Contacto</h2>
-     <br> 
-     <ul> 
-      <li><i class="las la-phone"></i>123-456-7890</li>
-      <br> 
-      <li><i class="las la-envelope"></i>cafeteria@gmail.com</li>
-      <br> 
-      <li><i class="las la-map-marker"></i>Los Andes 756</li> 
-     </ul> 
-    </div> 
-    <div class="redes-sociales"> 
-     <h2>Redes Sociales</h2> <a href="#"><i class="lab la-twitter"></i></a> <a href="#"><i class="lab la-instagram"></i></a> <a href="#"><i class="lab la-facebook"> </i> </a> 
-    </div> 
-    <div class="escribinos"> 
-     <h2>Escribinos</h2> 
-     <form> <label for="asunto">Asunto:</label> 
-      <input type="text" id="asunto" name="asunto"> <label for="contanos">Contanos:</label> <textarea id="contanos" name="contanos"></textarea> 
-      <input type="submit" value="Enviar"> 
-     </form> 
-    </div> 
-   </footer> 
+  <footer class="row text-white justify-content-center py-5 h-auto">
+    <div class="row w-75 footer">
+      <div class="col col-4 d-flex align-items-center flex-column columna">
+        <div class="centrar">
+          <h3 class="mb-4">Contactanos</h3>
+          <div class="telefono mb-1">
+            <i class="bi bi-telephone-fill"></i> 2235471353
+        </div>
 
+        <div class="email mb-1">
+          <i class="bi bi-envelope-fill"></i> cafetería@gmail.com
+        </div>
+        <div class="ubicacion mb-1">
+          <i class="bi bi-geo-alt-fill"></i> Hernandez 657
+        </div>
+        </div>
+
+        <div class="mapa">
+          <!-- ACA AGREGAR EL MAPA -->
+        </div>
+      </div>
+      <div class="col col-4 d-flex align-items-center flex-column columna">
+        <div class="centrar">
+        <h3 class="mb-4">Redes sociales</h3>
+
+        <div class="redes-footer d-flex">
+          <a href=""><i class="bi bi-facebook mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
+              <a href=""><i class="bi bi-twitter mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
+              <a href=""><i class="bi bi-instagram mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
+        </div>
+      </div>
+      </div>
+      <div class="col col-4 d-flex align-items-center flex-column columna">
+        <div class="centrar">
+        <h3 class="mb-5">Escribinos</h3>
+        <form action="">
+          <input type="text" placeholder="Asunto" class="mb-4">
+          <input type="text" placeholder="Contanos" class="pb-5">
+        </form>
+      </div>
+    </div>
+    </div>
+   </footer> 
+ 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/logic.js"></script>
 </body> 

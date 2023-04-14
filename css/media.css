@@ -27,4 +27,28 @@
     .banner{
         display: none;
     }
+
+    .fondo-nosotros{
+        display: none;
+    }
+
+    .nosotros{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url("../img/Banner-Nosotros.jpg");
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    .footer{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .columna{
+        justify-content: start;
+        float: left;
+        width: 70%;
+        margin-bottom: 40px;
+    }
   }
