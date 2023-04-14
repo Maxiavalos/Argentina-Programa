@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,49 +10,102 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> 
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
-  
+
   <title>Cafeteria</title>
 </head>
+
 <body style="background-color: #141414;">
   <main>
     <section class="principal overflow-hidden" style="height: auto;">
-      
+
       <header class="d-flex justify-content-center">
-          <nav class="navbar navbar-light navbar-expand-lg agrandar w-75">
-            <div class="container-fluid agrandar" style="position: relative;">
+        <nav class="navbar navbar-light navbar-expand-lg agrandar w-75">
+          <div class="container-fluid agrandar" style="position: relative;">
 
-              <!-- logo -->
+            <!-- logo -->
 
-              <a href="" class="navbar-brand">
-                <img src="img/logo.png" width="100px">
-              </a>
+            <a href="" class="navbar-brand">
+              <img src="img/logo.png" width="100px">
+            </a>
 
-              <!-- boton -->
+            <!-- boton -->
 
-              <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false">
-                <i class="bi bi-list text-white" style="font-size: 40px;"></i>
-              </button>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menu"
+              aria-controls="menu" aria-expanded="false">
+              <i class="bi bi-list text-white" style="font-size: 40px;"></i>
+            </button>
 
-              <!-- menu -->
+            <!-- menu -->
 
-              <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav text-center menu d-flex justify-content-center align-items-center" style="position: absolute; right: 0px;">
-                  <li class="nav-item py-1 px-4 mx-4 hover w-100 rounded-pill" style="background-color: #FF8C4C;"><a href="" class="nav-link text-white fw-bold">Carta</a></li>
-                  <li class="nav-item py-2 mx-4 hover w-100"><a href="" class="nav-link text-white fw-bold">Nosotros</a></li>
-                  <li class="nav-item py-2 mx-4 hover w-100"><a href="" class="nav-link text-white fw-bold">Contactanos</a></li>
-                </ul>
-              </div>
+            <div class="collapse navbar-collapse" id="menu">
+              <ul class="navbar-nav text-center menu d-flex justify-content-center align-items-center"
+                style="position: absolute; right: 0px;">
+                <li class="nav-item py-1 px-4 mx-4 hover w-100 rounded-pill" style="background-color: #FF8C4C;"><a
+                    href="" class="nav-link text-white fw-bold">Carta</a></li>
+                <li class="nav-item py-2 mx-4 hover w-100"><a href="" class="nav-link text-white fw-bold">Nosotros</a>
+                </li>
+                <li class="nav-item py-2 mx-4 hover w-100"><a href=""
+                    class="nav-link text-white fw-bold">Contactanos</a></li>
+              </ul>
             </div>
-          </nav>
+          </div>
+        </nav>
       </header>
 
       <section class="texto-principal d-flex justify-content-center align-items-center" style="height: auto;">
         <div class="row w-75">
           <div class="col col-4 parrafo-h1">
-            <h1 style="color: #D8D2B8; font-size: 40px;">El <strong style="font-size: 55px; color: #FFE36D;">aroma</strong> que te despierta, el <strong style="font-size: 55px; color: #FF8C4C;">sabor</strong> que te enamora.</h1>
-            <button class="rounded-pill border-0 py-2 px-4 fw-bold mt-5 shadow-lg" style="background-color: #FFE36D;">Locales</button>
+            <h1 style="color: #D8D2B8; font-size: 40px;">El <strong
+                style="font-size: 55px; color: #FFE36D;">aroma</strong> que te despierta, el <strong
+                style="font-size: 55px; color: #FF8C4C;">sabor</strong> que te enamora.</h1>
+            <button type="button" id="botonreserva"
+              class="rounded-pill border-0 py-2 px-4 fw-bold mt-5 shadow-lg btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#mimodal" style="background-color: #FFE36D; color:black;">Reservar</button>
+            <div class="modal fade" id="mimodal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="modalTitle">Hace tu reserva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="reservar-form"> <label class="formularior" for="name">Nombre:</label>
+                      <br>
+                      <input class="inputr" type="text" id="name" name="name" required>
+                      <br> <label class="formularior" for="email">Email:</label>
+                      <br>
+                      <input class="inputr" type="email" id="email" name="email" required>
+                      <br> <label class="formularior" for="date">Fecha:</label>
+                      <br>
+                      <input class="inputr" type="date" id="date" name="date" required>
+                      <br> <label class="formularior" for="time">Hora:</label>
+                      <br>
+                      <input class="inputr" type="time" id="time" name="time" required>
+                      <br> <label class="formularior" for="party-size">Tamaño de grupo:</label>
+                      <br>
+                      <input class="inputr" type="number" id="party-size" name="party-size" min="1" max="10" required>
+
+                    </form>
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <button id="botondereservar" type="button" class="btn btn-primary"
+                      data-bs-dismiss="modal">Reservar</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+
+
+
+
             <div class="redes d-flex" style="padding-top: 100px; margin-bottom: 100px;">
               <a href=""><i class="bi bi-facebook mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
               <a href=""><i class="bi bi-twitter mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
@@ -60,99 +114,125 @@
           </div>
         </div>
       </section>
-      <img src="img/Banner-principal.png" alt="" style="z-index: -1; position: absolute; top: 0px; right: 0px;" class="banner">
+      <img src="img/Banner-principal.png" alt="" style="z-index: -1; position: absolute; top: 0px; right: 0px;"
+        class="banner">
     </section>
 
 
 
     <section class="men py-5">
-        <div class="principall">
-            <h2 id="tit">Menu</h2>
-            <button id="botonmenu" class="boton_click">
-                <img src="img/flecha-hacia-abajo.png" alt="flecha" class="flecha_abajo">
-            </button>
+      <div class="principall">
+        <h2 id="tit">Menu</h2>
+        <button id="botonmenu" class="boton_click">
+          <img src="img/flecha-hacia-abajo.png" alt="flecha" class="flecha_abajo">
+        </button>
+      </div>
+      <section id="menuoculto" class="oculto">
+        <div class="primer">
+          <h3 class="tipo">CAFE</h3>
+          <section class="eleccion1">
+            <p>Café negro
+              ............................................................................................................................................
+              $200</p>
+            <p>Café cortado
+              .........................................................................................................................................
+              $300</p>
+            <p>Café con leche
+              ......................................................................................................................................
+              $250</p>
+            <p>Lagrima
+              ................................................................................................................................................
+              $400</p>
+            <p>Submarino
+              ............................................................................................................................................
+              $350</p>
+          </section>
         </div>
-        <section id="menuoculto" class="oculto">
-            <div class="primer">
-                <h3 class="tipo">CAFE</h3>
-                <section class="eleccion1">
-                <p>Café negro ............................................................................................................................................ $200</p>
-                <p>Café cortado ......................................................................................................................................... $300</p>
-                <p>Café con leche ...................................................................................................................................... $250</p>
-                <p>Lagrima ................................................................................................................................................ $400</p>
-                <p>Submarino ............................................................................................................................................ $350</p>
-                </section>
-            </div>
-            <div class="segundo">
-                    <h3 class="tipo">ACOMPAÑANTES</h3>
-                    <section class="eleccion2">
-                        <p>Torta ..................................................................................................................................................... $200</p>
-                        <p>Tostadas .............................................................................................................................................. $200</p>
-                        <p>Vainillas ............................................................................................................................................... $200</p>
-                        <p>Medialunas ......................................................................................................................................... $200</p>
-                        <p>Sandwich J/Q ...................................................................................................................................... $200</p>
-                    </section>
-             </div>
-        </section>
+        <div class="segundo">
+          <h3 class="tipo">ACOMPAÑANTES</h3>
+          <section class="eleccion2">
+            <p>Torta
+              .....................................................................................................................................................
+              $200</p>
+            <p>Tostadas
+              ..............................................................................................................................................
+              $200</p>
+            <p>Vainillas
+              ...............................................................................................................................................
+              $200</p>
+            <p>Medialunas
+              .........................................................................................................................................
+              $200</p>
+            <p>Sandwich J/Q
+              ......................................................................................................................................
+              $200</p>
+          </section>
+        </div>
+      </section>
     </section>
 
     <section class="row" style="height: 100vh; overflow: hidden;">
-        <div class="col fondo-nosotros">
+      <div class="col fondo-nosotros">
 
+      </div>
+      <div class="col d-flex justify-content-center align-items-center nosotros">
+        <div class="texto w-50 h-50">
+          <h2 class="mb-4" style="color: #FFE36D;">Nosotros</h2>
+          <p class="fs-5" style="color: #D8D2B8;">Bienvenidos a nuestra nueva cafetería, donde nos enorgullece ofrecer
+            una selección de café de origen único, cuidadosamente preparados para brindar una experiencia única y
+            deliciosa. Además, ofrecemos bebidas frías y calientes, comidas saludables y un ambiente acogedor para
+            disfrutar de su experiencia. Esperamos ser su destino diario para relajarse, socializar o simplemente
+            disfrutar de un buen café en solitario. ¡Los esperamos en nuestra cafetería!</p>
         </div>
-        <div class="col d-flex justify-content-center align-items-center nosotros">
-          <div class="texto w-50 h-50">
-            <h2 class="mb-4" style="color: #FFE36D;">Nosotros</h2>
-            <p class="fs-5" style="color: #D8D2B8;">Bienvenidos a nuestra nueva cafetería, donde nos enorgullece ofrecer una selección de café de origen único, cuidadosamente preparados para brindar una experiencia única y deliciosa. Además, ofrecemos bebidas frías y calientes, comidas saludables y un ambiente acogedor para disfrutar de su experiencia. Esperamos ser su destino diario para relajarse, socializar o simplemente disfrutar de un buen café en solitario. ¡Los esperamos en nuestra cafetería!</p>
-          </div>
-          </div>
+      </div>
     </section>
 
-  <footer class="row text-white justify-content-center py-5 h-auto">
-    <div class="row w-75 footer">
-      <div class="col col-4 d-flex align-items-center flex-column columna">
-        <div class="centrar">
-          <h3 class="mb-4">Contactanos</h3>
-          <div class="telefono mb-1">
-            <i class="bi bi-telephone-fill"></i> 2235471353
-        </div>
+    <footer class="row text-white justify-content-center py-5 h-auto">
+      <div class="row w-75 footer">
+        <div class="col col-4 d-flex align-items-center flex-column columna">
+          <div class="centrar">
+            <h3 class="mb-4">Contactanos</h3>
+            <div class="telefono mb-1">
+              <i class="bi bi-telephone-fill"></i> 2235471353
+            </div>
 
-        <div class="email mb-1">
-          <i class="bi bi-envelope-fill"></i> cafetería@gmail.com
-        </div>
-        <div class="ubicacion mb-1">
-          <i class="bi bi-geo-alt-fill"></i> Hernandez 657
-        </div>
-        </div>
+            <div class="email mb-1">
+              <i class="bi bi-envelope-fill"></i> cafetería@gmail.com
+            </div>
+            <div class="ubicacion mb-1">
+              <i class="bi bi-geo-alt-fill"></i> Hernandez 657
+            </div>
+          </div>
 
-        <div class="mapa">
-          <!-- ACA AGREGAR EL MAPA -->
+          <div class="mapa">
+            <!-- ACA AGREGAR EL MAPA -->
+          </div>
         </div>
-      </div>
-      <div class="col col-4 d-flex align-items-center flex-column columna">
-        <div class="centrar">
-        <h3 class="mb-4">Redes sociales</h3>
+        <div class="col col-4 d-flex align-items-center flex-column columna">
+          <div class="centrar">
+            <h3 class="mb-4">Redes sociales</h3>
 
-        <div class="redes-footer d-flex">
-          <a href=""><i class="bi bi-facebook mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
+            <div class="redes-footer d-flex">
+              <a href=""><i class="bi bi-facebook mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
               <a href=""><i class="bi bi-twitter mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
               <a href=""><i class="bi bi-instagram mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col col-4 d-flex align-items-center flex-column columna">
+          <div class="centrar">
+            <h3 class="mb-5">Escribinos</h3>
+            <form action="">
+              <input type="text" placeholder="Asunto" class="mb-4">
+              <input type="text" placeholder="Contanos" class="pb-5">
+            </form>
+          </div>
         </div>
       </div>
-      </div>
-      <div class="col col-4 d-flex align-items-center flex-column columna">
-        <div class="centrar">
-        <h3 class="mb-5">Escribinos</h3>
-        <form action="">
-          <input type="text" placeholder="Asunto" class="mb-4">
-          <input type="text" placeholder="Contanos" class="pb-5">
-        </form>
-      </div>
-    </div>
-    </div>
-   </footer> 
- 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/logic.js"></script>
-</body> 
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/logic.js"></script>
+</body>
+
 </html>
