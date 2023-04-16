@@ -138,4 +138,10 @@ footer{
     border-radius: 5px;
     border: none;
   }
+  .error-message{
+    color:red;
+  }
+  #reservaexitosa{
+    color:green;
+  }
   
