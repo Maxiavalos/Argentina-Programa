@@ -9,14 +9,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="css/media.css">
   <link rel="stylesheet" href="css/estilos.css">
-  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> 
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 
   
   <title>Cafeteria</title>
 </head>
 <body style="background-color: #141414;">
   <main>
-    <section class="principal overflow-hidden" style="height: auto;">
+    <section class="principal overflow-hidden" style="height: 100vh;">
       
       <header class="d-flex justify-content-center">
           <nav class="navbar navbar-light navbar-expand-lg agrandar w-75">
@@ -38,21 +38,75 @@
 
               <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav text-center menu d-flex justify-content-center align-items-center" style="position: absolute; right: 0px;">
-                  <li class="nav-item py-1 px-4 mx-4 hover w-100 rounded-pill" style="background-color: #FF8C4C;"><a href="" class="nav-link text-white fw-bold">Carta</a></li>
-                  <li class="nav-item py-2 mx-4 hover w-100"><a href="" class="nav-link text-white fw-bold">Nosotros</a></li>
-                  <li class="nav-item py-2 mx-4 hover w-100"><a href="" class="nav-link text-white fw-bold">Contactanos</a></li>
+                  <li class="nav-item py-2 mx-4 hover w-100 fw-bold"><a href="#carta" class="nav-link text-white fw-bold">CARTA</a></li>
+                  <li class="nav-item py-2 mx-4 hover w-100"><a href="#nosotros" class="nav-link text-white fw-bold">NOSOTROS</a></li>
+                  <li class="nav-item py-2 mx-4 hover w-100"><a href="#contacto" class="nav-link text-white fw-bold">CONTACTANOS</a></li>
                 </ul>
               </div>
             </div>
           </nav>
       </header>
 
-      <section class="texto-principal d-flex justify-content-center align-items-center" style="height: auto;">
+      <section class="texto-principal d-flex justify-content-center align-items-center mt-5" style="height: auto;">
         <div class="row w-75">
           <div class="col col-4 parrafo-h1">
             <h1 style="color: #D8D2B8; font-size: 40px;">El <strong style="font-size: 55px; color: #FFE36D;">aroma</strong> que te despierta, el <strong style="font-size: 55px; color: #FF8C4C;">sabor</strong> que te enamora.</h1>
-            <button class="rounded-pill border-0 py-2 px-4 fw-bold mt-5 shadow-lg" style="background-color: #FFE36D;">Locales</button>
-            <div class="redes d-flex" style="padding-top: 100px; margin-bottom: 100px;">
+            <button type="button" id="botonreserva"
+              class="rounded-pill border-0 py-2 px-4 fw-bold mt-5 shadow-lg btn btn-primary" data-bs-toggle="modal"
+              data-bs-target="#mimodal" style="background-color: #FFE36D; color:black;">Reservar</button>
+            <div class="modal fade" id="mimodal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title text-center" id="modalTitle">Hace tu reserva</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="reservar-form"> <label class="formularior" for="name">Nombre:</label>
+                      
+                      <br>
+                      <input class="inputr" type="text" id="name" name="name" required>
+                      <br> 
+                      <div id="name-error" class="error-message"></div>
+                      <br>
+                      <label class="formularior" for="email" required>Email:</label>
+                      <br>
+                      <input class="inputr" type="email" id="email" name="email" required>
+                      <br> 
+                      <div id="email-error" class="error-message"></div>
+                      <br><label class="formularior" for="date">Fecha:</label>
+                      
+                      <br>
+                      <input class="inputr" type="date" id="date" name="date" required>
+                      <br> 
+                      <div id="date-error" class="error-message"></div>
+                      <br><label class="formularior" for="time">Hora:</label>
+                      
+                      <br>
+                      <input class="inputr" type="time" id="time" name="time" required>
+                      <br>
+                      <div id="time-error" class="error-message"></div>
+                      <br> <label class="formularior" for="size">Cantidad de personas:</label>
+                      <br>
+                      <input class="inputr" type="number" id="size" name="size" min="1" max="10" required>
+                      <div id="size-error" class="error-message"></div>
+
+                    </form>
+
+
+                  </div>
+                  <div class="modal-footer">
+                    <div id="reservaexitosa" class="reservaexitosa"></div>
+                    <button id="botondereservar" type="button" class="btn btn-primary" onclick="validarFormulario()">Reservar</button>
+                    <button id="cerrarmodal" type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="cerrar()">Cerrar</button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+            <div class="redes d-flex" style="padding-top: 100px;">
               <a href=""><i class="bi bi-facebook mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
               <a href=""><i class="bi bi-twitter mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
               <a href=""><i class="bi bi-instagram mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
@@ -65,9 +119,9 @@
 
 
 
-    <section class="men py-5">
+    <section class="men py-5" id="carta">
         <div class="principall">
-            <h2 id="tit">Menu</h2>
+            <h2 id="tit" class="fw-bold">CARTA</h2>
             <button id="botonmenu" class="boton_click">
                 <img src="img/flecha-hacia-abajo.png" alt="flecha" class="flecha_abajo">
             </button>
@@ -96,7 +150,7 @@
         </section>
     </section>
 
-    <section class="row" style="height: 100vh; overflow: hidden;">
+    <section class="row nosotros-celulares" id="nosotros">
         <div class="col fondo-nosotros">
 
         </div>
@@ -108,11 +162,11 @@
           </div>
     </section>
 
-  <footer class="row text-white justify-content-center py-5 h-auto">
+  <footer class="row text-white justify-content-center py-5" id="contacto" style="height: auto;">
     <div class="row w-75 footer">
       <div class="col col-4 d-flex align-items-center flex-column columna">
         <div class="centrar">
-          <h3 class="mb-4">Contactanos</h3>
+          <h3 class="mb-4" style="color: #D8D2B8;">Contactanos</h3>
           <div class="telefono mb-1">
             <i class="bi bi-telephone-fill"></i> 2235471353
         </div>
@@ -125,13 +179,13 @@
         </div>
         </div>
 
-        <div class="mapa">
-          <!-- ACA AGREGAR EL MAPA -->
+        <div class="mapa mt-5" id="mapa" style="width: 200px; height: 160px;">
+          
         </div>
       </div>
       <div class="col col-4 d-flex align-items-center flex-column columna">
         <div class="centrar">
-        <h3 class="mb-4">Redes sociales</h3>
+        <h3 class="mb-4" style="color: #D8D2B8;">Redes sociales</h3>
 
         <div class="redes-footer d-flex">
           <a href=""><i class="bi bi-facebook mx-2 text-white fs-4" style="cursor: pointer;"></i></a>
@@ -142,10 +196,13 @@
       </div>
       <div class="col col-4 d-flex align-items-center flex-column columna">
         <div class="centrar">
-        <h3 class="mb-5">Escribinos</h3>
-        <form action="">
-          <input type="text" placeholder="Asunto" class="mb-4">
-          <input type="text" placeholder="Contanos" class="pb-5">
+        <h3 class="mb-5" style="color: #D8D2B8;">Escribinos</h3>
+        <form action="" class="d-flex flex-column">
+          <input type="text" placeholder="Nombre" class="mb-4 rounded-1">
+          <input type="email" placeholder="Email" class="mb-4 rounded-1">
+          <input type="text" placeholder="Mensaje" class="pb-5 rounded-1">
+
+          <input type="button" value="Enviar" class="mt-5 w-50 border-0 rounded-1" style="background-color: #FFE36D;">
         </form>
       </div>
     </div>
@@ -153,6 +210,10 @@
    </footer> 
  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
   <script src="js/logic.js"></script>
+  <script src="js/api.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=Mapa"></script>
 </body> 
 </html>

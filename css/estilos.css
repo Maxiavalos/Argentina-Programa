@@ -2,6 +2,10 @@
     width: 100%;
 }
 
+.hover:hover{
+    border-bottom: 5px solid #FFE36D;
+}
+
 .men {
     background-color: #0e0e0e;
     font-family: 'Nunito Sans', sans-serif;
@@ -48,12 +52,13 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     color: white;
     cursor: pointer;
-    border-radius: 50%;
-    border-width: 0px;
+    border-radius: 100%;
     background-color: white;
     margin-left: 60px;
     display: inline;
-
+    width: 30px;
+    height: 30px;
+    border: 0px;
 }
 .arrow .flecha_abajo{
     transform: rotate(180deg);
@@ -108,6 +113,10 @@ body {
     margin-top: 50px;
 }
 
+.nosotros-celulares{
+    height: 100vh;
+}
+
 .fondo-nosotros{
   background-image: url(../img/Banner-Nosotros.jpg);
   background-position: center;
@@ -118,3 +127,28 @@ body {
 footer{
     background-color: #271919;
 }
+
+#reservar-form {
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ddd;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .formularior {
+    font-weight: bold;
+  }
+  .inputr{
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+  }
+  .error-message{
+    color:red;
+  }
+  #reservaexitosa{
+    color:green;
+  }

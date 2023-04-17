@@ -15,10 +15,6 @@
         background-color: #1d1d1d;
         height: 70vh;
     }
-
-    .hover:hover{
-        background-color: rgb(26, 26, 26);
-    }
 }
 
 
@@ -37,6 +33,7 @@
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
+        height: 1000px;
     }
 
     .footer{
