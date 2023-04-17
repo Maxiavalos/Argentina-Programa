@@ -139,6 +139,21 @@ const nameInput = document.querySelector('#name');
     time: timeInput.value,
     size: sizeInput.value,
   };
+   // Crea un nuevo objeto jsPDF
+   var pdf = new jsPDF();
+   pdf.setFont("Helvetica", "bold"); 
+  pdf.text(20, 20, "Reserva exitosa"); 
+
+   // Agrega el contenido al PDF
+   pdf.setFont("Helvetica", "normal");
+   pdf.text(20, 40, "Nombre: " + reservation.name);
+   pdf.text(20, 50, "Email: " + reservation.email);
+   pdf.text(20, 60, "Hora de la reserva: " + reservation.time);
+   pdf.text(20, 70, "Cantidad de personas: " + reservation.size);
+   pdf.text(20, 80, "Ubicación: Hernandez 657");
+
+   // Guarda el PDF como un archivo
+   pdf.save("Comprobante de reserva.pdf");
   console.log(reservation); // envía la reserva a un servidor o API en lugar de imprimir en la consola
   reservarForm.reset(); // borra los datos del formulario después de enviar
   document.getElementById("name-error").innerHTML = ""; // Borra mensajes de error al enviar correctamente el formulario
