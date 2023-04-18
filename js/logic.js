@@ -36,6 +36,13 @@ listElements.forEach(listElement=>{
 //Funcion validar
 
 
+
+
+
+
+
+
+
 const reservarBtn = document.querySelector('#botonreserva');
 const reservarForm = document.querySelector('#reservar-form');
 const reservarclick = document.querySelector('#botondereservar');
@@ -177,3 +184,30 @@ const nameInput = document.querySelector('#name');
     document.getElementById("time-error").innerHTML = "";
     document.getElementById("size-error").innerHTML = "";
   }
+
+
+
+
+
+$(document).ready(function() {
+            $("#btnEnviar").click(function() {
+                var nombreContacto = $("#nombreContacto").val();
+                var emailContacto = $("#emailContacto").val();
+                var mensajeContacto = $("mensajeContacto").val();
+                $.ajax({
+                    url: "https://reqres.in/api/users",
+                    type: "POST",
+                    data: {
+                        nombreContacto: nombreContacto,
+                        emailContacto: emailContacto,
+                        mensajeContacto: mensajeContacto
+                    },
+                    success: function(result) {
+                        alert("Datos Enviados");
+                    },
+                    error: function(xhr, status, error) {
+                        alert("Ha ocurrido un error: " + error);
+                    }
+                });
+            });
+        });

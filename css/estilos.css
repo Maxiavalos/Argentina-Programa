@@ -9,30 +9,17 @@
 .men {
     background-color: #0e0e0e;
     font-family: 'Nunito Sans', sans-serif;
-    color: white;
     height: auto;
 }
 
 .oculto {
     font-family: 'Nunito Sans', sans-serif;
     color: white;
-    height:0;
+    display: none;
     overflow: hidden;
-    transition: height 500ms ease;
-    
+    transition: 500ms ease;
 }
 
-.oculto.mostrar {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    align-self: center;
-    border-top: 2px solid white;
-    border-bottom:2px solid white;
-    margin-left: 25%; 
-    margin-right: 25%;
-}
 .oculto.ocultar{
     height: 0;
     display: flex;
@@ -41,7 +28,7 @@
     align-self: center;
     margin-left: 25%; 
     margin-right: 25%;
-    
+    transition: 500ms ease;
 }
 body {
     background-color: black;
@@ -53,7 +40,7 @@ body {
     color: white;
     cursor: pointer;
     border-radius: 100%;
-    background-color: white;
+    background-color: #D8D2B8;;
     margin-left: 60px;
     display: inline;
     width: 30px;
@@ -113,7 +100,7 @@ body {
     margin-top: 50px;
 }
 
-.nosotros-celulares{
+.nosotros-contenedor{
     height: 100vh;
 }
 
@@ -122,10 +109,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  box-shadow: 1px 1px 96px 37px rgba(0,0,0,0.75) inset;
+ -webkit-box-shadow: 1px 1px 96px 37px rgba(0,0,0,0.75) inset;
+ -moz-box-shadow: 1px 1px 96px 37px rgba(0,0,0,0.75) inset;
 }
 
 footer{
-    background-color: #271919;
+    background-color: #211818;
 }
 
 #reservar-form {

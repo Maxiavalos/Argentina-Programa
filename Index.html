@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="css/media.css">
-  <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-
+  <link rel="stylesheet" href="css/media.css"> 
+  <link rel="stylesheet" href="css/estilos.css"> 
   
   <title>Cafeteria</title>
 </head>
 <body style="background-color: #141414;">
-  <main>
+  <main style="overflow: hidden;">
     <section class="principal overflow-hidden" style="height: 100vh;">
       
       <header class="d-flex justify-content-center">
@@ -38,9 +39,9 @@
 
               <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav text-center menu d-flex justify-content-center align-items-center" style="position: absolute; right: 0px;">
-                  <li class="nav-item py-2 mx-4 hover w-100 fw-bold"><a href="#carta" class="nav-link text-white fw-bold">CARTA</a></li>
-                  <li class="nav-item py-2 mx-4 hover w-100"><a href="#nosotros" class="nav-link text-white fw-bold">NOSOTROS</a></li>
-                  <li class="nav-item py-2 mx-4 hover w-100"><a href="#contacto" class="nav-link text-white fw-bold">CONTACTANOS</a></li>
+                  <li class="nav-item py-2 mx-4 hover w-100 fw-bold"><a href="https://drive.google.com/uc?export=download&id=1R7WyXt3C3STtN_CtcoBNYopa5FE8DCGu" class="nav-link text-white fw-bold">Carta</a></li>
+                  <li class="nav-item py-2 mx-4 hover w-100"><a href="#nosotros" class="nav-link text-white fw-bold">Nosotros</a></li>
+                  <li class="nav-item py-2 mx-4 hover w-100"><a href="#contacto" class="nav-link text-white fw-bold">Contactanos</a></li>
                 </ul>
               </div>
             </div>
@@ -56,37 +57,38 @@
               data-bs-target="#mimodal" style="background-color: #FFE36D; color:black;">Reservar</button>
             <div class="modal fade" id="mimodal" tabindex="-1" aria-hidden="true" aria-labelledby="modalTitle">
               <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
+                <div class="modal-content" style="background-color: #141414; color: white;">
                   <div class="modal-header">
-                    <h5 class="modal-title text-center" id="modalTitle">Hace tu reserva</h5>
+                    <h5 class="modal-title" id="modalTitle">Hace tu reserva</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div class="modal-body">
-                    <form id="reservar-form"> <label class="formularior" for="name">Nombre:</label>
-                      
+                  <div class="modal-body" style="background-color: #141414; padding: 0px;">
+                    <form id="reservar-form" class="border-0" style="background-color: #141414;">
+
+                      <label class="formularior pb-2" for="name">Nombre:</label>
                       <br>
                       <input class="inputr" type="text" id="name" name="name" required>
                       <br> 
                       <div id="name-error" class="error-message"></div>
                       <br>
-                      <label class="formularior" for="email" required>Email:</label>
+                      <label class="formularior pb-2" for="email" required>Email:</label>
                       <br>
                       <input class="inputr" type="email" id="email" name="email" required>
                       <br> 
                       <div id="email-error" class="error-message"></div>
-                      <br><label class="formularior" for="date">Fecha:</label>
+                      <br><label class="formularior pb-2" for="date">Fecha:</label>
                       
                       <br>
                       <input class="inputr" type="date" id="date" name="date" required>
                       <br> 
                       <div id="date-error" class="error-message"></div>
-                      <br><label class="formularior" for="time">Hora:</label>
+                      <br><label class="formularior pb-2" for="time">Hora:</label>
                       
                       <br>
                       <input class="inputr" type="time" id="time" name="time" required>
                       <br>
                       <div id="time-error" class="error-message"></div>
-                      <br> <label class="formularior" for="size">Cantidad de personas:</label>
+                      <br> <label class="formularior pb-2" for="size">Cantidad de personas:</label>
                       <br>
                       <input class="inputr" type="number" id="size" name="size" min="1" max="10" required>
                       <div id="size-error" class="error-message"></div>
@@ -96,8 +98,8 @@
 
                   </div>
                   <div class="modal-footer">
-                    <div id="reservaexitosa" class="reservaexitosa"></div>
-                    <button id="botondereservar" type="button" class="btn btn-primary" onclick="validarFormulario()">Reservar</button>
+                    <div id="reservaexitosa" class="reservaexitosa" style="color: #3fc83a;"></div>
+                    <button id="botondereservar" type="button" class="btn btn-primary border-0 fw-bold" style="background-color: #FFE36D; color: #141414;" onclick="validarFormulario()">Reservar</button>
                     <button id="cerrarmodal" type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="cerrar()">Cerrar</button>
                   </div>
                 </div>
@@ -119,14 +121,14 @@
 
 
 
-    <section class="men py-5" id="carta">
+    <section class="men py-5" id="carta" style="color: #D8D2B8;">
         <div class="principall">
             <h2 id="tit" class="fw-bold">CARTA</h2>
             <button id="botonmenu" class="boton_click">
                 <img src="img/flecha-hacia-abajo.png" alt="flecha" class="flecha_abajo">
             </button>
         </div>
-        <section id="menuoculto" class="oculto">
+        <section id="menuoculto" class="oculto" style="color: #D8D2B8;">
             <div class="primer">
                 <h3 class="tipo">CAFE</h3>
                 <section class="eleccion1">
@@ -150,20 +152,20 @@
         </section>
     </section>
 
-    <section class="row nosotros-celulares" id="nosotros">
+    <section class="row nosotros-contenedor" id="nosotros" style="overflow: hidden;">
         <div class="col fondo-nosotros">
 
         </div>
         <div class="col d-flex justify-content-center align-items-center nosotros">
-          <div class="texto w-50 h-50">
+          <div class="texto w-50">
             <h2 class="mb-4" style="color: #FFE36D;">Nosotros</h2>
             <p class="fs-5" style="color: #D8D2B8;">Bienvenidos a nuestra nueva cafetería, donde nos enorgullece ofrecer una selección de café de origen único, cuidadosamente preparados para brindar una experiencia única y deliciosa. Además, ofrecemos bebidas frías y calientes, comidas saludables y un ambiente acogedor para disfrutar de su experiencia. Esperamos ser su destino diario para relajarse, socializar o simplemente disfrutar de un buen café en solitario. ¡Los esperamos en nuestra cafetería!</p>
           </div>
           </div>
     </section>
 
-  <footer class="row text-white justify-content-center py-5" id="contacto" style="height: auto;">
-    <div class="row w-75 footer">
+  <footer class="row text-white justify-content-center" id="contacto" style="height: auto;">
+    <div class="row w-75 footer py-5">
       <div class="col col-4 d-flex align-items-center flex-column columna">
         <div class="centrar">
           <h3 class="mb-4" style="color: #D8D2B8;">Contactanos</h3>
@@ -197,17 +199,20 @@
       <div class="col col-4 d-flex align-items-center flex-column columna">
         <div class="centrar">
         <h3 class="mb-5" style="color: #D8D2B8;">Escribinos</h3>
-        <form action="" class="d-flex flex-column">
-          <input type="text" placeholder="Nombre" class="mb-4 rounded-1">
-          <input type="email" placeholder="Email" class="mb-4 rounded-1">
-          <input type="text" placeholder="Mensaje" class="pb-5 rounded-1">
+        <form class="d-flex flex-column" method="post">
+          <input type="text" placeholder="Nombre" class="mb-4 rounded-1" id="nombreContacto">
+          <input type="email" placeholder="Email" class="mb-4 rounded-1" id="emailContacto">
+          <input type="text" placeholder="Mensaje" class="pb-5 rounded-1" id="mensajeContacto">
 
-          <input type="button" value="Enviar" class="mt-5 w-50 border-0 rounded-1" style="background-color: #FFE36D;">
+          <input type="button" value="Enviar" class="mt-5 w-50 border-0 rounded-1" style="background-color: #FFE36D;" id="btnEnviar">
         </form>
       </div>
     </div>
     </div>
-   </footer> 
+    <div class="row text-center pt-3" style="background-color: #181414;">
+      <p>© 2023 Cafeteria. Todos los derechos reservados. - Santi Girolami, Maximo Avalos y Nahuel Sierra</p>
+    </div>
+   </footer>
  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
